@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+
+<tiles-definitions>
+
+    <definition name="page.mainLayout" path="/welcomeStruts.jsp">
+        <put name="header" value="/WEB-INF/jsps/layout/header.jsp" />           
+        <put name="body"  value="/WEB-INF/jsps/layout/body.jsp" />
+        <put name="footer" value="/WEB-INF/jsps/layout/footer.jsp" />
+    </definition>
+    
+    <definition name="page.login" extends="page.mainLayout">
+         <put name="body"  value="/WEB-INF/jsps/layout/login.jsp" />
+    </definition>
+    
+     <definition name="page.REGsuccess" extends="page.mainLayout">
+         <put name="body"  value="/WEB-INF/jsps/layout/success.jsp" />
+    </definition>
+    <!-- doctor module -->
+    <definition name="page.doctorLayout" path="/WEB-INF/jsps/doctorModule/doctorLayout.jsp">
+        <put name="header" value="/WEB-INF/jsps/doctorModule/doctorHeader.jsp" />           
+        <put name="body"  value="/WEB-INF/jsps/doctorModule/doctorHome.jsp" />
+        <put name="footer" value="/WEB-INF/jsps/layout/footer.jsp" />
+    </definition>
+    
+    <definition name="page.createPatient" extends="page.doctorLayout">
+         <put name="body"  value="/WEB-INF/jsps/doctorModule/createPatient.jsp" />
+    </definition>
+    
+     <definition name="page.success" extends="page.doctorLayout">
+         <put name="body"  value="/WEB-INF/jsps/layout/success.jsp" />
+    </definition>
+    
+     <definition name="page.PatientList" extends="page.doctorLayout">
+         <put name="body"  value="/WEB-INF/jsps/doctorModule/patientList.jsp" />
+    </definition>
+     <definition name="page.patientReportpage" extends="page.doctorLayout">
+         <put name="body"  value="/WEB-INF/jsps/doctorModule/reportPage.jsp" />
+    </definition>
+     
+    <definition name="page.patientReportUpload" extends="page.doctorLayout">
+         <put name="body"  value="/WEB-INF/jsps/doctorModule/patientReportUpload.jsp" />
+    </definition>
+    
+    <definition name="page.docprofile" extends="page.doctorLayout">
+         <put name="body"  value="/WEB-INF/jsps/doctorModule/doctoreditprofile.jsp" />
+    </definition>
+    
+    <definition name="page.notification" extends="page.doctorLayout">
+         <put name="body"  value="/WEB-INF/jsps/doctorModule/notification.jsp" />
+    </definition>
+    
+    
+    <!-- End doctor module -->
+    
+    <!-- Patient module -->
+    <definition name="page.patientLayout" path="/WEB-INF/jsps/patientModule/patientLayout.jsp">
+        <put name="header" value="/WEB-INF/jsps/patientModule/patientHeader.jsp" />           
+        <put name="body"  value="/WEB-INF/jsps/patientModule/patientHome.jsp" />
+        <put name="footer" value="/WEB-INF/jsps/layout/footer.jsp" />
+    </definition>
+    
+    <definition name="page.patientReportpatientModule" extends="page.patientLayout">
+         <put name="body"  value="/WEB-INF/jsps/patientModule/reportPage.jsp" />
+    </definition>
+    
+     <definition name="page.myProfile" extends="page.patientLayout">
+         <put name="body"  value="/WEB-INF/jsps/patientModule/myProfile.jsp" />
+    </definition>
+    
+     <definition name="page.peditprofile" extends="page.patientLayout">
+         <put name="body"  value="/WEB-INF/jsps/patientModule/patienteditprofile.jsp" />
+    </definition>
+    
+    <!-- End Patient module -->
+    
+    
+</tiles-definitions>
